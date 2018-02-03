@@ -4,8 +4,10 @@ public class Topic {
 	private int id;
 	private String name;
 	private String description;
-	
 
+	public Topic() {
+		super();
+	}
 	public Topic(int id, String name, String description) {
 		super();
 		this.id = id;
