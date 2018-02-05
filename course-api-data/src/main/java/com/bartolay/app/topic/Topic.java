@@ -1,4 +1,4 @@
-package com.bartolay.app.model;
+package com.bartolay.app.topic;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

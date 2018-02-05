@@ -1,9 +1,7 @@
-package com.bartolay.app.dao;
+package com.bartolay.app.topic;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-
-import com.bartolay.app.model.Topic;
 
 @Repository
 public interface TopicDao extends CrudRepository<Topic, Integer>{

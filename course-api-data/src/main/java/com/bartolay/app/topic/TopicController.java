@@ -1,4 +1,4 @@
-package com.bartolay.app.controllers;
+package com.bartolay.app.topic;
 
 import java.util.List;
 
@@ -8,9 +8,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.bartolay.app.model.Topic;
-import com.bartolay.app.services.TopicService;
 
 @RestController
 public class TopicController {
