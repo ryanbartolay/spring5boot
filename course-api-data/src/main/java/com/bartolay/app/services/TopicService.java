@@ -1,7 +1,6 @@
 package com.bartolay.app.services;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,12 +14,7 @@ public class TopicService {
 	
 	@Autowired
 	private TopicDao topicDao;
-	
-	private List<Topic> topics = new ArrayList<>(Arrays.asList(
-			new Topic(1, "Spring Framework", "Spring tutorial"),
-			new Topic(2, "PHP Language", "php tutorial all")
-		));
-	
+
 	public List<Topic> getAllTopics() {
 		List<Topic> topics = new ArrayList<>();
 		this.topicDao.findAll().forEach(topics::add);
@@ -37,15 +31,10 @@ public class TopicService {
 	}
 
 	public void updateTopic(Integer id, Topic topic) {
-		for(int i = 0; i < topics.size(); ++i) {
-			if(topics.get(i).getId() == id.intValue()) {
-				topics.set(i, topic);
-				return;
-			}
-		}
+		this.topicDao.save(topic);
 	}
 
 	public void deleteTopic(Integer id) {
-		topics.removeIf(t -> t.getId() == id.intValue());
+		this.topicDao.delete(id);
 	}
 }
