@@ -13,31 +13,31 @@ import org.springframework.web.bind.annotation.RestController;
 public class CourseController {
 	
 	@Autowired
-	private CourseService topicService;
+	private CourseService courseService;
 	
-	@RequestMapping("/topics")
-	public List<Course> getAllTopics() {
+	@RequestMapping("/courses")
+	public List<Course> getAllcourses() {
 		// TODO Auto-generated method stub
-		return topicService.getAllTopics();
+		return courseService.getAllCourses();
 	}
 	
-	@RequestMapping("/topics/{id}")
-	public Course getTopic(@PathVariable Integer id) {
-		return topicService.getTopic(id);
+	@RequestMapping("/courses/{id}")
+	public Course getCourse(@PathVariable Integer id) {
+		return courseService.getCourse(id);
 	}
 	
-	@RequestMapping(method=RequestMethod.POST, value="/topics")
-	public void createTopic(@RequestBody Course topic) {
-		topicService.createTopic(topic);
+	@RequestMapping(method=RequestMethod.POST, value="/courses")
+	public void createCourse(@RequestBody Course Course) {
+		courseService.createCourse(Course);
 	}
 	
-	@RequestMapping(method=RequestMethod.PUT, value="/topics/{id}")
-	public void updateTopic(@PathVariable Integer id, @RequestBody Course topic) {
-		topicService.updateTopic(id, topic);
+	@RequestMapping(method=RequestMethod.PUT, value="/courses/{id}")
+	public void updateCourse(@PathVariable Integer id, @RequestBody Course Course) {
+		courseService.updateCourse(id, Course);
 	}
 	
-	@RequestMapping(method=RequestMethod.DELETE, value="/topics/{id}")
-	public void deleteTopic(@PathVariable Integer id) {
-		topicService.deleteTopic(id);
+	@RequestMapping(method=RequestMethod.DELETE, value="/courses/{id}")
+	public void deleteCourse(@PathVariable Integer id) {
+		courseService.deleteCourse(id);
 	}
 }

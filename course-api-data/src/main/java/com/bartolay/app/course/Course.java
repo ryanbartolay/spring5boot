@@ -1,7 +1,11 @@
 package com.bartolay.app.course;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+
+import com.bartolay.app.topic.Topic;
 
 @Entity
 public class Course {
@@ -10,6 +14,7 @@ public class Course {
 	private int id;
 	private String name;
 	private String description;
+	private List<Topic> topics;
 
 	public Course() {
 		super();
@@ -37,5 +42,11 @@ public class Course {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public List<Topic> getTopics() {
+		return topics;
+	}
+	public void setTopics(List<Topic> topics) {
+		this.topics = topics;
 	}
 }
