@@ -1,9 +1,8 @@
 package com.bartolay.app.course;
 
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import com.bartolay.app.topic.Topic;
 
@@ -14,16 +13,19 @@ public class Course {
 	private int id;
 	private String name;
 	private String description;
-	private List<Topic> topics;
+	
+	@ManyToOne
+	private Topic topic;
 
 	public Course() {
 		super();
 	}
-	public Course(int id, String name, String description) {
+	public Course(int id, String name, String description, int topicId) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.description = description;
+		this.topic = new Topic(topicId);
 	}
 	public int getId() {
 		return id;
@@ -43,10 +45,11 @@ public class Course {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public List<Topic> getTopics() {
-		return topics;
+	public Topic getTopic() {
+		return topic;
 	}
-	public void setTopics(List<Topic> topics) {
-		this.topics = topics;
+	public void setTopic(Topic topic) {
+		this.topic = topic;
 	}
+	
 }

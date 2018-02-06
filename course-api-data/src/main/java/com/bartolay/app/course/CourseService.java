@@ -12,14 +12,14 @@ public class CourseService {
 	@Autowired
 	private CourseDao courseDao;
 
-	public List<Course> getAllCourses() {
+	public List<Course> getAllCourses(Integer topicId) {
 		List<Course> courses = new ArrayList<>();
-		this.courseDao.findAll().forEach(courses::add);
+		this.courseDao.findByTopicId(topicId).forEach(courses::add);
 		return courses;
 	}
 	
-	public Course getCourse(Integer id) {
-		return this.courseDao.findOne(id);
+	public Course getCourse(Integer courseId) {
+		return this.courseDao.findOne(courseId);
 	}
 	
 	public void createCourse(Course course) {
@@ -27,7 +27,7 @@ public class CourseService {
 		this.courseDao.save(course);
 	}
 
-	public void updateCourse(Integer id, Course course) {
+	public void updateCourse(Course course) {
 		this.courseDao.save(course);
 	}
 

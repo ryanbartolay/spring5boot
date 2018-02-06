@@ -14,6 +14,9 @@ public class Topic {
 	public Topic() {
 		super();
 	}
+	public Topic(int id) {
+		this.id = id;
+	}
 	public Topic(int id, String name, String description) {
 		super();
 		this.id = id;
