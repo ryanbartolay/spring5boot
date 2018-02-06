@@ -9,7 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
-@Entity
+@Entity(name="authors")
 public class Author {
 	
 	@Id
@@ -17,7 +17,8 @@ public class Author {
 	private Long id;
 	private String firstname;
 	private String lastname;
-	@ManyToMany
+	
+	@ManyToMany(mappedBy="authors")
 	private Set<Book> books = new HashSet<>();
 	
 	public Author() {

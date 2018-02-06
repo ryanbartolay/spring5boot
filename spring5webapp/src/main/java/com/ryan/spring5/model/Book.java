@@ -7,9 +7,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
-@Entity
+@Entity(name="books")
 public class Book {
 	
 	@Id
@@ -20,6 +22,7 @@ public class Book {
 	private String isbn;
 	private String publisher;
 	@ManyToMany
+	@JoinTable(name="author_book", joinColumns=@JoinColumn(name="book_id"), inverseJoinColumns=@JoinColumn(name="author_id"))
 	private Set<Author> authors = new HashSet<>();
 	
 	public Long getId() {
