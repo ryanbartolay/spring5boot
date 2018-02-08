@@ -1,12 +1,15 @@
 package com.bartolay.app.topic;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Topic {
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String name;
 	private String description;
@@ -16,6 +19,10 @@ public class Topic {
 	}
 	public Topic(int id) {
 		this.id = id;
+	}
+	public Topic(String name, String description) {
+		this.name = name;
+		this.description = description;
 	}
 	public Topic(int id, String name, String description) {
 		super();
