@@ -1,4 +1,4 @@
-package com.ryan.spring5.controllers;
+package com.ryan.spring5.restcontrollers;
 
 import java.util.List;
 
@@ -9,11 +9,11 @@ import com.ryan.spring5.model.Author;
 import com.ryan.spring5.services.AuthorService;
 
 @RestController
-public class AuthorController {
+public class AuthorRestController {
 
 	private AuthorService authorService;
 	
-	public AuthorController(AuthorService authorService) {
+	public AuthorRestController(AuthorService authorService) {
 		this.authorService = authorService;
 	}
 

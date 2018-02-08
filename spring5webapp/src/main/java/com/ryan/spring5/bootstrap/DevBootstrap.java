@@ -44,12 +44,14 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> 
 		johnGrisham.getBooks().add(b2);
 		
 		authorRepository.save(johnGrisham);
+		bookRepository.save(b2);
 		
 		Author rod = new Author("Rod", "Johnson");
 		Book noEJB = new Book("J2EE Development without EJB", "JSR-23444", p2);
 		rod.getBooks().add(noEJB);
 		
 		authorRepository.save(rod);
+		bookRepository.save(noEJB);
 	}
 
 	@Override

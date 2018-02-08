@@ -1,4 +1,4 @@
-package com.ryan.spring5.controllers;
+package com.ryan.spring5.restcontrollers;
 
 import java.util.List;
 
@@ -9,11 +9,11 @@ import com.ryan.spring5.model.Publisher;
 import com.ryan.spring5.services.PublisherService;
 
 @RestController
-public class PublisherController {
+public class PublisherRestController {
 
 	private PublisherService publisherService;
 
-	public PublisherController(PublisherService publisherService) {
+	public PublisherRestController(PublisherService publisherService) {
 		super();
 		this.publisherService = publisherService;
 	}
