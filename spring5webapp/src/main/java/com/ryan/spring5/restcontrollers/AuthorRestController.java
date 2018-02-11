@@ -17,8 +17,8 @@ public class AuthorRestController {
 		this.authorService = authorService;
 	}
 
-	@RequestMapping("/authors")
-	public List<Author> getAuthors() {
+	@RequestMapping("/authorsRest")
+	public List<Author> getAllAuthors() {
 		return authorService.getAllAuthors();
 	}
 }

@@ -13,8 +13,11 @@ public class AuthorService {
 	private AuthorRepository authorRepository;
 
 	public AuthorService(AuthorRepository authorRepository) {
-		super();
 		this.authorRepository = authorRepository;
+	}
+	
+	public Iterable<Author> getAll() {
+		return authorRepository.findAll();
 	}
 	
 	public List<Author> getAllAuthors() {
