@@ -1,4 +1,4 @@
-package com.bartolay.app;
+package net.gotech.springwebdemo.SpringBootJokesApp;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class TempApplicationTests {
+public class SpringBootJokesAppApplicationTests {
 
 	@Test
 	public void contextLoads() {
