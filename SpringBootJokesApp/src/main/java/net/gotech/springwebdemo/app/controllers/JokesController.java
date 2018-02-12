@@ -15,7 +15,7 @@ public class JokesController {
 		this.rqs = rqs;
 	}
 
-	@RequestMapping(path= {"/", ""})
+	@RequestMapping({"/", ""})
 	public String index(Model model) {
 		model.addAttribute("joke", rqs.getJoke());
 		return "joke";
