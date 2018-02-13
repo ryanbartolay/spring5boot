@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: SpringBootJokesApp
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: rbartolay
+Implementation-Vendor-Id: net.gotech.springwebdemo
+Build-Jdk: 1.8.0_151
+Implementation-URL: http://projects.spring.io/spring-boot/spring-boot-
+ starter-parent/SpringBootJokesApp/
+Created-By: Maven Integration for Eclipse
+
